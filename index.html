@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Elite - Agendamento</title>
+    <!-- Fonte Roboto solicitada -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Barbearia Elite</h1>
+    <form id="formAgendamento" novalidate>
+        <div class="form-group">
+            <label for="nome_cliente">Nome Completo</label>
+            <input type="text" id="nome_cliente" required placeholder="Ex: João Silva">
+        </div>
+
+        <div class="form-group">
+            <label for="telefone_cliente">Telefone de Contato</label>
+            <input type="tel" id="telefone_cliente" required placeholder="Ex: (81) 99999-9999">
+        </div>
+
+        <div class="form-group">
+            <label for="email_cliente">E-mail</label>
+            <input type="email" id="email_cliente" required placeholder="Ex: joao@email.com">
+        </div>
+
+        <div class="form-group">
+            <label for="data_agendamento">Data do Serviço</label>
+            <input type="date" id="data_agendamento" required>
+        </div>
+
+        <div class="form-group">
+            <label for="hora_agendamento">Horário</label>
+            <input type="time" id="hora_agendamento" required>
+        </div>
+
+        <div class="form-group">
+            <label for="servico_desejado">Serviço Desejado</label>
+            <select id="servico_desejado" required>
+                <option value="" disabled selected>Selecione um serviço</option>
+                <option value="Corte de Cabelo">Corte de Cabelo</option>
+                <option value="Barba">Barba</option>
+                <option value="Cabelo + Barba">Cabelo + Barba</option>
+            </select>
+        </div>
+
+        <button type="submit">Agendar Horário</button>
+    </form>
+    <div id="feedback" class="message"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
